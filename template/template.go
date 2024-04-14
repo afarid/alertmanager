@@ -15,6 +15,7 @@ package template
 
 import (
 	"bytes"
+	"encoding/json"
 	tmplhtml "html/template"
 	"io"
 	"net/url"
@@ -30,8 +31,8 @@ import (
 	"golang.org/x/text/cases"
 	"golang.org/x/text/language"
 
-	"github.com/prometheus/alertmanager/asset"
-	"github.com/prometheus/alertmanager/types"
+	"github.com/afarid/alertmanager/asset"
+	"github.com/afarid/alertmanager/types"
 )
 
 // Template bundles a text and a html template instance.
@@ -203,6 +204,13 @@ var DefaultFuncs = FuncMap{
 			return ""
 		}
 		return q.Get("g0.expr")
+	},
+	"jsonMarshalString": func(s string) string {
+		sBytes, err := json.Marshal(s)
+		if err != nil {
+			return ""
+		}
+		return string(sBytes)
 	},
 }
 

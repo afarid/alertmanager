@@ -31,10 +31,10 @@ import (
 	"github.com/stretchr/testify/require"
 	"gopkg.in/yaml.v2"
 
-	"github.com/prometheus/alertmanager/config"
-	"github.com/prometheus/alertmanager/notify"
-	"github.com/prometheus/alertmanager/notify/test"
-	"github.com/prometheus/alertmanager/types"
+	"github.com/afarid/alertmanager/config"
+	"github.com/afarid/alertmanager/notify"
+	"github.com/afarid/alertmanager/notify/test"
+	"github.com/afarid/alertmanager/types"
 )
 
 func TestTelegramUnmarshal(t *testing.T) {

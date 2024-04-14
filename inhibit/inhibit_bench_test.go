@@ -25,10 +25,10 @@ import (
 	"github.com/prometheus/common/model"
 	"github.com/stretchr/testify/require"
 
-	"github.com/prometheus/alertmanager/config"
-	"github.com/prometheus/alertmanager/pkg/labels"
-	"github.com/prometheus/alertmanager/provider/mem"
-	"github.com/prometheus/alertmanager/types"
+	"github.com/afarid/alertmanager/config"
+	"github.com/afarid/alertmanager/pkg/labels"
+	"github.com/afarid/alertmanager/provider/mem"
+	"github.com/afarid/alertmanager/types"
 )
 
 // BenchmarkMutes benchmarks the Mutes method for the Muter interface

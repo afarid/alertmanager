@@ -19,7 +19,7 @@ import (
 	"os"
 	"runtime/debug"
 
-	"github.com/prometheus/alertmanager/pkg/labels"
+	"github.com/afarid/alertmanager/pkg/labels"
 )
 
 var (

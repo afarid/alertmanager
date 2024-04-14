@@ -25,8 +25,8 @@ import (
 	"github.com/prometheus/common/model"
 	"github.com/stretchr/testify/require"
 
-	"github.com/prometheus/alertmanager/featurecontrol"
-	"github.com/prometheus/alertmanager/matchers/compat"
+	"github.com/afarid/alertmanager/featurecontrol"
+	"github.com/afarid/alertmanager/matchers/compat"
 )
 
 func TestMemMarker_Count(t *testing.T) {

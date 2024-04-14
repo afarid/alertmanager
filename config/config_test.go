@@ -912,7 +912,7 @@ func TestEmptyFieldsAndRegex(t *testing.T) {
 	}
 
 	// Load a non-empty configuration to ensure that all fields are overwritten.
-	// See https://github.com/prometheus/alertmanager/issues/1649.
+	// See https://github.com/afarid/alertmanager/issues/1649.
 	_, err := LoadFile("testdata/conf.good.yml")
 	if err != nil {
 		t.Errorf("Error parsing %s: %s", "testdata/conf.good.yml", err)

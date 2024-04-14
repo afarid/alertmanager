@@ -28,10 +28,10 @@ import (
 	"github.com/prometheus/common/model"
 	"github.com/stretchr/testify/require"
 
-	"github.com/prometheus/alertmanager/config"
-	"github.com/prometheus/alertmanager/notify"
-	"github.com/prometheus/alertmanager/provider/mem"
-	"github.com/prometheus/alertmanager/types"
+	"github.com/afarid/alertmanager/config"
+	"github.com/afarid/alertmanager/notify"
+	"github.com/afarid/alertmanager/provider/mem"
+	"github.com/afarid/alertmanager/types"
 )
 
 func TestAggrGroup(t *testing.T) {

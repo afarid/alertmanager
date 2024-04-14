@@ -42,23 +42,23 @@ import (
 	"github.com/prometheus/exporter-toolkit/web"
 	webflag "github.com/prometheus/exporter-toolkit/web/kingpinflag"
 
-	"github.com/prometheus/alertmanager/api"
-	"github.com/prometheus/alertmanager/cluster"
-	"github.com/prometheus/alertmanager/config"
-	"github.com/prometheus/alertmanager/config/receiver"
-	"github.com/prometheus/alertmanager/dispatch"
-	"github.com/prometheus/alertmanager/featurecontrol"
-	"github.com/prometheus/alertmanager/inhibit"
-	"github.com/prometheus/alertmanager/matchers/compat"
-	"github.com/prometheus/alertmanager/nflog"
-	"github.com/prometheus/alertmanager/notify"
-	"github.com/prometheus/alertmanager/provider/mem"
-	"github.com/prometheus/alertmanager/silence"
-	"github.com/prometheus/alertmanager/template"
-	"github.com/prometheus/alertmanager/timeinterval"
-	"github.com/prometheus/alertmanager/types"
-	"github.com/prometheus/alertmanager/ui"
-	reactapp "github.com/prometheus/alertmanager/ui/react-app"
+	"github.com/afarid/alertmanager/api"
+	"github.com/afarid/alertmanager/cluster"
+	"github.com/afarid/alertmanager/config"
+	"github.com/afarid/alertmanager/config/receiver"
+	"github.com/afarid/alertmanager/dispatch"
+	"github.com/afarid/alertmanager/featurecontrol"
+	"github.com/afarid/alertmanager/inhibit"
+	"github.com/afarid/alertmanager/matchers/compat"
+	"github.com/afarid/alertmanager/nflog"
+	"github.com/afarid/alertmanager/notify"
+	"github.com/afarid/alertmanager/provider/mem"
+	"github.com/afarid/alertmanager/silence"
+	"github.com/afarid/alertmanager/template"
+	"github.com/afarid/alertmanager/timeinterval"
+	"github.com/afarid/alertmanager/types"
+	"github.com/afarid/alertmanager/ui"
+	reactapp "github.com/afarid/alertmanager/ui/react-app"
 )
 
 var (
@@ -154,7 +154,7 @@ func run() int {
 		httpTimeout    = kingpin.Flag("web.timeout", "Timeout for HTTP requests. If negative or zero, no timeout is set.").Default("0").Duration()
 
 		clusterBindAddr = kingpin.Flag("cluster.listen-address", "Listen address for cluster. Set to empty string to disable HA mode.").
-				Default(defaultClusterAddr).String()
+			Default(defaultClusterAddr).String()
 		clusterAdvertiseAddr   = kingpin.Flag("cluster.advertise-address", "Explicit address to advertise in cluster.").String()
 		peers                  = kingpin.Flag("cluster.peer", "Initial peers (may be repeated).").Strings()
 		peerTimeout            = kingpin.Flag("cluster.peer-timeout", "Time to wait between peers to send notifications.").Default("15s").Duration()

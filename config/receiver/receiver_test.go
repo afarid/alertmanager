@@ -19,8 +19,8 @@ import (
 	commoncfg "github.com/prometheus/common/config"
 	"github.com/stretchr/testify/require"
 
-	"github.com/prometheus/alertmanager/config"
-	"github.com/prometheus/alertmanager/notify"
+	"github.com/afarid/alertmanager/config"
+	"github.com/afarid/alertmanager/notify"
 )
 
 type sendResolved bool

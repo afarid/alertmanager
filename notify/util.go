@@ -27,8 +27,8 @@ import (
 	"github.com/go-kit/log/level"
 	"github.com/prometheus/common/version"
 
-	"github.com/prometheus/alertmanager/template"
-	"github.com/prometheus/alertmanager/types"
+	"github.com/afarid/alertmanager/template"
+	"github.com/afarid/alertmanager/types"
 )
 
 // truncationMarker is the character used to represent a truncation.

@@ -21,9 +21,9 @@ import (
 	"github.com/go-openapi/strfmt"
 	"github.com/stretchr/testify/require"
 
-	open_api_models "github.com/prometheus/alertmanager/api/v2/models"
-	"github.com/prometheus/alertmanager/pkg/labels"
-	"github.com/prometheus/alertmanager/silence/silencepb"
+	open_api_models "github.com/afarid/alertmanager/api/v2/models"
+	"github.com/afarid/alertmanager/pkg/labels"
+	"github.com/afarid/alertmanager/silence/silencepb"
 )
 
 func createSilence(t *testing.T, ID, creator string, start, ends time.Time) (open_api_models.PostableSilence, []byte) {
