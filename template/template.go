@@ -192,6 +192,18 @@ var DefaultFuncs = FuncMap{
 	"stringSlice": func(s ...string) []string {
 		return s
 	},
+	"getAlertQuery": func(alert *Alert) string {
+		generatorURL := alert.GeneratorURL
+		u, err := url.Parse(generatorURL)
+		if err != nil {
+			return ""
+		}
+		q, err := url.ParseQuery(u.RawQuery)
+		if err != nil {
+			return ""
+		}
+		return q.Get("g0.expr")
+	},
 }
 
 // Pair is a key/value string pair.
