@@ -60,7 +60,7 @@ linters-settings:
     period: true
     capital: true
   goimports:
-    local-prefixes: github.com/prometheus/alertmanager
+    local-prefixes: github.com/afarid/alertmanager
   gofumpt:
     extra-rules: true
   revive:

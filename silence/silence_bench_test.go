@@ -24,8 +24,8 @@ import (
 	"github.com/prometheus/common/model"
 	"github.com/stretchr/testify/require"
 
-	"github.com/prometheus/alertmanager/silence/silencepb"
-	"github.com/prometheus/alertmanager/types"
+	"github.com/afarid/alertmanager/silence/silencepb"
+	"github.com/afarid/alertmanager/types"
 )
 
 // BenchmarkMutes benchmarks the Mutes method for the Muter interface for

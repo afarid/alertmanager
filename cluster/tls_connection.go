@@ -27,7 +27,7 @@ import (
 	"github.com/gogo/protobuf/proto"
 	"github.com/hashicorp/memberlist"
 
-	"github.com/prometheus/alertmanager/cluster/clusterpb"
+	"github.com/afarid/alertmanager/cluster/clusterpb"
 )
 
 const (

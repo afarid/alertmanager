@@ -19,7 +19,7 @@ import (
 
 	kingpin "github.com/alecthomas/kingpin/v2"
 
-	"github.com/prometheus/alertmanager/cli/format"
+	"github.com/afarid/alertmanager/cli/format"
 )
 
 const configHelp = `View current config.

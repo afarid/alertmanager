@@ -22,12 +22,12 @@ import (
 	"github.com/go-openapi/strfmt"
 	"github.com/stretchr/testify/require"
 
-	"github.com/prometheus/alertmanager/api/v2/client/alert"
-	"github.com/prometheus/alertmanager/api/v2/client/alertgroup"
-	"github.com/prometheus/alertmanager/api/v2/client/silence"
-	"github.com/prometheus/alertmanager/api/v2/models"
-	"github.com/prometheus/alertmanager/featurecontrol"
-	. "github.com/prometheus/alertmanager/test/with_api_v2"
+	"github.com/afarid/alertmanager/api/v2/client/alert"
+	"github.com/afarid/alertmanager/api/v2/client/alertgroup"
+	"github.com/afarid/alertmanager/api/v2/client/silence"
+	"github.com/afarid/alertmanager/api/v2/models"
+	"github.com/afarid/alertmanager/featurecontrol"
+	. "github.com/afarid/alertmanager/test/with_api_v2"
 )
 
 func TestAddUTF8Alerts(t *testing.T) {

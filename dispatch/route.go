@@ -23,8 +23,8 @@ import (
 
 	"github.com/prometheus/common/model"
 
-	"github.com/prometheus/alertmanager/config"
-	"github.com/prometheus/alertmanager/pkg/labels"
+	"github.com/afarid/alertmanager/config"
+	"github.com/afarid/alertmanager/pkg/labels"
 )
 
 // DefaultRouteOpts are the defaulting routing options which apply

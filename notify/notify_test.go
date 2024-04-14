@@ -29,13 +29,13 @@ import (
 	"github.com/prometheus/common/model"
 	"github.com/stretchr/testify/require"
 
-	"github.com/prometheus/alertmanager/featurecontrol"
-	"github.com/prometheus/alertmanager/nflog"
-	"github.com/prometheus/alertmanager/nflog/nflogpb"
-	"github.com/prometheus/alertmanager/silence"
-	"github.com/prometheus/alertmanager/silence/silencepb"
-	"github.com/prometheus/alertmanager/timeinterval"
-	"github.com/prometheus/alertmanager/types"
+	"github.com/afarid/alertmanager/featurecontrol"
+	"github.com/afarid/alertmanager/nflog"
+	"github.com/afarid/alertmanager/nflog/nflogpb"
+	"github.com/afarid/alertmanager/silence"
+	"github.com/afarid/alertmanager/silence/silencepb"
+	"github.com/afarid/alertmanager/timeinterval"
+	"github.com/afarid/alertmanager/types"
 )
 
 type sendResolved bool

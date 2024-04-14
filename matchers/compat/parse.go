@@ -23,9 +23,9 @@ import (
 	"github.com/go-kit/log/level"
 	"github.com/prometheus/common/model"
 
-	"github.com/prometheus/alertmanager/featurecontrol"
-	"github.com/prometheus/alertmanager/matchers/parse"
-	"github.com/prometheus/alertmanager/pkg/labels"
+	"github.com/afarid/alertmanager/featurecontrol"
+	"github.com/afarid/alertmanager/matchers/parse"
+	"github.com/afarid/alertmanager/pkg/labels"
 )
 
 var (

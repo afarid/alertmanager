@@ -64,8 +64,8 @@ apiv2: api/v2/models api/v2/restapi api/v2/client
 SWAGGER = docker run \
 	--user=$(shell id -u $(USER)):$(shell id -g $(USER)) \
 	--rm \
-	-v $(shell pwd):/go/src/github.com/prometheus/alertmanager \
-	-w /go/src/github.com/prometheus/alertmanager quay.io/goswagger/swagger:v0.30.5
+	-v $(shell pwd):/go/src/github.com/afarid/alertmanager \
+	-w /go/src/github.com/afarid/alertmanager quay.io/goswagger/swagger:v0.30.5
 
 api/v2/models api/v2/restapi api/v2/client: api/v2/openapi.yaml
 	-rm -r api/v2/{client,models,restapi}
@@ -80,7 +80,7 @@ clean:
 	- @cd $(FRONTEND_DIR) && $(MAKE) clean
 
 # In github actions we skip the email test for now. Service containers in github
-# actions currently have a bug, see https://github.com/prometheus/alertmanager/pull/3299
+# actions currently have a bug, see https://github.com/afarid/alertmanager/pull/3299
 # So define a test target, that skips the email test for now.
 .PHONY: test
 test: $(GOTEST_DIR)

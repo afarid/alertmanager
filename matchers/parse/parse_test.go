@@ -18,7 +18,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/prometheus/alertmanager/pkg/labels"
+	"github.com/afarid/alertmanager/pkg/labels"
 )
 
 func TestMatchers(t *testing.T) {

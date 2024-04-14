@@ -19,9 +19,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/prometheus/alertmanager/api/v2/models"
-	"github.com/prometheus/alertmanager/config"
-	"github.com/prometheus/alertmanager/dispatch"
+	"github.com/afarid/alertmanager/api/v2/models"
+	"github.com/afarid/alertmanager/config"
+	"github.com/afarid/alertmanager/dispatch"
 )
 
 type routingTestDefinition struct {

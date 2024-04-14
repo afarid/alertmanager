@@ -27,10 +27,10 @@ import (
 	commoncfg "github.com/prometheus/common/config"
 	"github.com/prometheus/common/model"
 
-	"github.com/prometheus/alertmanager/config"
-	"github.com/prometheus/alertmanager/notify"
-	"github.com/prometheus/alertmanager/template"
-	"github.com/prometheus/alertmanager/types"
+	"github.com/afarid/alertmanager/config"
+	"github.com/afarid/alertmanager/notify"
+	"github.com/afarid/alertmanager/template"
+	"github.com/afarid/alertmanager/types"
 )
 
 // https://help.victorops.com/knowledge-base/incident-fields-glossary/ - 20480 characters.

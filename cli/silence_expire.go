@@ -20,7 +20,7 @@ import (
 	"github.com/alecthomas/kingpin/v2"
 	"github.com/go-openapi/strfmt"
 
-	"github.com/prometheus/alertmanager/api/v2/client/silence"
+	"github.com/afarid/alertmanager/api/v2/client/silence"
 )
 
 type silenceExpireCmd struct {

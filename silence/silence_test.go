@@ -31,10 +31,10 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.uber.org/atomic"
 
-	"github.com/prometheus/alertmanager/featurecontrol"
-	"github.com/prometheus/alertmanager/matchers/compat"
-	pb "github.com/prometheus/alertmanager/silence/silencepb"
-	"github.com/prometheus/alertmanager/types"
+	"github.com/afarid/alertmanager/featurecontrol"
+	"github.com/afarid/alertmanager/matchers/compat"
+	pb "github.com/afarid/alertmanager/silence/silencepb"
+	"github.com/afarid/alertmanager/types"
 )
 
 func checkErr(t *testing.T, expected string, got error) {
@@ -185,7 +185,7 @@ func TestSilencesSnapshot(t *testing.T) {
 	}
 }
 
-// This tests a regression introduced by https://github.com/prometheus/alertmanager/pull/2689.
+// This tests a regression introduced by https://github.com/afarid/alertmanager/pull/2689.
 func TestSilences_Maintenance_DefaultMaintenanceFuncDoesntCrash(t *testing.T) {
 	f, err := os.CreateTemp("", "snapshot")
 	require.NoError(t, err, "creating temp file failed")

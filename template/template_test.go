@@ -24,7 +24,7 @@ import (
 	"github.com/prometheus/common/model"
 	"github.com/stretchr/testify/require"
 
-	"github.com/prometheus/alertmanager/types"
+	"github.com/afarid/alertmanager/types"
 )
 
 func TestPairNames(t *testing.T) {

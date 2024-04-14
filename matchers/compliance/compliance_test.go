@@ -17,8 +17,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/prometheus/alertmanager/matchers/parse"
-	"github.com/prometheus/alertmanager/pkg/labels"
+	"github.com/afarid/alertmanager/matchers/parse"
+	"github.com/afarid/alertmanager/pkg/labels"
 )
 
 func TestCompliance(t *testing.T) {

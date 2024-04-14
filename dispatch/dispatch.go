@@ -26,10 +26,10 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/common/model"
 
-	"github.com/prometheus/alertmanager/notify"
-	"github.com/prometheus/alertmanager/provider"
-	"github.com/prometheus/alertmanager/store"
-	"github.com/prometheus/alertmanager/types"
+	"github.com/afarid/alertmanager/notify"
+	"github.com/afarid/alertmanager/provider"
+	"github.com/afarid/alertmanager/store"
+	"github.com/afarid/alertmanager/types"
 )
 
 // DispatcherMetrics represents metrics associated to a dispatcher.
