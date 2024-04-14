@@ -382,7 +382,7 @@ func (t *Template) Data(recv string, groupLabels model.LabelSet, alerts ...*type
 			Annotations:  make(KV, len(a.Annotations)),
 			StartsAt:     a.StartsAt,
 			EndsAt:       a.EndsAt,
-			GeneratorURL: a.GeneratorURL,
+			GeneratorURL: PrometheusToGrafanaURL(a.GeneratorURL),
 			Fingerprint:  a.Fingerprint().String(),
 		}
 		for k, v := range a.Labels {
@@ -427,4 +427,75 @@ func (t *Template) Data(recv string, groupLabels model.LabelSet, alerts ...*type
 	}
 
 	return data
+}
+
+func PrometheusToGrafanaURL(generatorURL string) string {
+	u, _ := url.Parse(generatorURL)
+	q, err := url.ParseQuery(u.RawQuery)
+	if err != nil {
+		return ""
+	}
+	query := q.Get("g0.expr")
+	grafanaPanes := GrafanaPanes{Ai: Ai{
+		Datasource: "prometheus",
+		Queries: []Query{{
+			RefId:   "A",
+			Expr:    query,
+			Range:   true,
+			Instant: true,
+			Datasource: struct {
+				Type string `json:"type"`
+				Uid  string `json:"uid"`
+			}{
+				Type: "prometheus",
+				Uid:  "prometheus",
+			},
+			EditorMode:   "code",
+			LegendFormat: "__auto",
+		},
+		},
+		Range: Range{
+			From: "now-1h",
+			To:   "now",
+		},
+	}}
+	u.Path = "explore"
+	q = u.Query()
+	q.Set("orgId", "1")
+	q.Set("schemaVersion", "1")
+	panesBytes, err := json.Marshal(grafanaPanes)
+	if err != nil {
+		return ""
+	}
+	q.Set("panes", string(panesBytes))
+	u.RawQuery = q.Encode()
+	return u.String()
+}
+
+type GrafanaPanes struct {
+	Ai `json:"Ai"`
+}
+
+type Ai struct {
+	Datasource string  `json:"datasource"`
+	Queries    []Query `json:"queries"`
+	Range      Range   `json:"range"`
+}
+
+type Query struct {
+	RefId      string `json:"refId"`
+	Expr       string `json:"expr"`
+	Range      bool   `json:"range"`
+	Instant    bool   `json:"instant"`
+	Datasource struct {
+		Type string `json:"type"`
+		Uid  string `json:"uid"`
+	} `json:"datasource"`
+	EditorMode   string `json:"editorMode"`
+	LegendFormat string `json:"legendFormat"`
+}
+
+type Range struct {
+	From string `json:"from"`
+	To   string `json:"to"`
 }
