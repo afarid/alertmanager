@@ -154,7 +154,7 @@ func run() int {
 		httpTimeout    = kingpin.Flag("web.timeout", "Timeout for HTTP requests. If negative or zero, no timeout is set.").Default("0").Duration()
 
 		clusterBindAddr = kingpin.Flag("cluster.listen-address", "Listen address for cluster. Set to empty string to disable HA mode.").
-			Default(defaultClusterAddr).String()
+				Default(defaultClusterAddr).String()
 		clusterAdvertiseAddr   = kingpin.Flag("cluster.advertise-address", "Explicit address to advertise in cluster.").String()
 		peers                  = kingpin.Flag("cluster.peer", "Initial peers (may be repeated).").Strings()
 		peerTimeout            = kingpin.Flag("cluster.peer-timeout", "Time to wait between peers to send notifications.").Default("15s").Duration()
